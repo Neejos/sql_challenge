@@ -1,9 +1,18 @@
-
-  
 create table departments(
     dept_no varchar(20),
     dept_name varchar(30),
     primary key (dept_no));
+	
+create table salaries(
+	emp_no int,
+    salary int,
+    primary key(emp_no));
+	
+create table titles(
+    title_id varchar(10),
+    title varchar(30),
+    primary key (title_id));
+    
     
 create table employees(
     emp_no int,
@@ -33,13 +42,6 @@ create table dept_manager(
     foreign key(dept_no) references departments(dept_no),
     foreign key(emp_no) references employees(emp_no));
     
-create table salaries(
-    emp_no int,
-    salary int,
-    primary key(emp_no);
     
-create table titles(
-    title_id varchar(10),
-    title varchar(30),
-    primary key (title_id));
+
     
